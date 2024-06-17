@@ -4,3 +4,5 @@ packages:
 * st
   * feh
   * picom
+* xrandr
+  * autorandr
