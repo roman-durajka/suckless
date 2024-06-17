@@ -1,0 +1,4 @@
+packages:
+* st
+  * feh
+  * picom
