@@ -71,8 +71,9 @@ static const struct arg args[] = {
 	{ ram_perc, "[RAM %s%] ", NULL },
 	{ battery_perc, "[BAT INTERNAL %s%] ", "BAT0" },
 	{ battery_perc, "[BAT EXTERNAL %s%] ", "BAT1" },
-	{ ipv4, "[LAN IP %s] ", "enp4s0" },
-	{ ipv4, "[WLAN IP %s] ", "wlp3s0" },
+	//{ ipv4, "[LAN IP %s] ", "enp4s0" },
+	//{ ipv4, "[WLAN IP %s] ", "wlp3s0" },
+	{ wifi_essid, "[WIFI %s] ", "wlp3s0"},
 	{ datetime, "%s",           "%F %T" },
 
 
