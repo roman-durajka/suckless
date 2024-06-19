@@ -73,8 +73,8 @@ static const struct arg args[] = {
 	{ battery_perc, "[BAT EXTERNAL %s%] ", "BAT1" },
 	//{ ipv4, "[LAN IP %s] ", "enp4s0" },
 	//{ ipv4, "[WLAN IP %s] ", "wlp3s0" },
-	{ wifi_essid, "[WIFI %s] ", "wlp3s0"},
+	{ wifi_essid, "[WIFI %s] ", "wlp3s0" },
+	{ run_command, "[BRI %s] ", "xbacklight -get | cut -d'.' -f1" },
+	{ run_command, "[VOL %s] ", "volume.sh" },
 	{ datetime, "%s",           "%F %T" },
-
-
 };
