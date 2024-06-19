@@ -6,3 +6,5 @@ packages:
   * picom
 * xrandr
   * autorandr
+* other
+  * sound - pulseaudio
