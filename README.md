@@ -12,7 +12,7 @@ packages:
 * other
   * sound - pulseaudio
   * network - iwd, impala
-  * lock - xautolock
+  * lock - xautolock, slock
   * redshift
   * xbacklight
   * lxappearance
