@@ -86,10 +86,12 @@ static const char *printscreen[] = {"flameshot", "gui", NULL};
 #include <X11/XF86keysym.h>
 
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+static const char *mutemiccmd[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL };
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
 static const char *brupcmd[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
+static const char *slockcmd[] = { "slock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -145,8 +147,10 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ 0,				XK_Print,  spawn,	   {.v = printscreen } },
 	{ 0, 				XF86XK_AudioMute, spawn,   {.v = mutecmd } },
+	{ 0, 				XF86XK_AudioMicMute, spawn,   {.v = mutemiccmd } },
 	{ 0, 				XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
 	{ 0, 				XF86XK_MonBrightnessUp, spawn, {.v = brupcmd} },
