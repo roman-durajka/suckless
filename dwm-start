@@ -1,0 +1,8 @@
+xrdb ~/.Xresources
+slstatus &
+~/.fehbg &
+picom &
+redshift &
+xautolock -time 10 -locker slock &
+dunst &
+exec dbus-run-session dwm
