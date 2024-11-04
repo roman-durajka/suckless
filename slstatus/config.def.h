@@ -65,20 +65,16 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
 
-/* Displays the temperature read from the file /sys/class/thermal/thermal_zone0/temp , you can change that file
-     to any other file that displays the temperature of certain components, you can even list multiple
-     temperatures by duplicating it */ 
 	{ temp, "[TEMP %sC] ", "/sys/class/thermal/thermal_zone0/temp" },
 	{ cpu_perc, "[CPU %s%] ", NULL },
 	{ ram_perc, "[RAM %s%] ", NULL },
-  /* Displays battery's capacity, you need to specify the battery folder's name listed in /sys/class/power_supply,
-     for me it's BAT0 and it'll automatically read the capacity file */
-	{ battery_perc, "[BAT %s%] ", "BAT0" },
-	{ battery_perc, "[BAT %s%] ", "BAT1" },
-  /* Displays IPv4 address for the given network interface (which in my case is wlp3s0) in your local network */
-	{ ipv4, "[LAN IP %s] ", "enp4s0" },
-	{ ipv4, "[WLAN IP %s] ", "wlp3s0" },
-
+	{ battery_perc, "[BAT INTERNAL %s%] ", "BAT0" },
+	{ battery_perc, "[BAT EXTERNAL %s%] ", "BAT1" },
+	//{ ipv4, "[LAN IP %s] ", "enp4s0" },
+	//{ ipv4, "[WLAN IP %s] ", "wlp3s0" },
+	{ wifi_essid, "[WIFI %s] ", "wlp3s0" },
+	{ run_command, "[BRI %s] ", "brightnessctl | grep -o '(.*%)' | sed 's/[^0-9]//g'" },
+	{ run_command, "[VOL %s] ", "volume.sh" },
+	{ datetime, "%s",           "%F %T" },
 };
