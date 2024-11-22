@@ -10,9 +10,9 @@ packages:
 * xrandr
   * autorandr
 * other
-  * sound - pulseaudio
+  * sound - pulseaudio, pavucontrol
   * network - iwd, impala
   * lock - xautolock, slock
   * redshift
-  * xbacklight
+  * xbacklight, acpilight
   * lxappearance
