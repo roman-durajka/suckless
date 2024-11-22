@@ -1,7 +1,6 @@
-xrdb ~/.Xresources
 slstatus &
 ~/.fehbg &
-picom &
+picom --backend glx &
 redshift &
 xautolock -time 10 -locker slock &
 dunst &
