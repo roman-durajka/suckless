@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=dwm
+Comment=Dynamic tiling window manager
+Exec=/usr/local/bin/dwm-start
+TryExec=/usr/local/bin/dwm-start
+Type=Application
